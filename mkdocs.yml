@@ -1,0 +1,15 @@
+theme:
+  name: null
+  custom_dir: 'mkdocs-material/material'
+  language: en
+  palette:
+    primary: 'pink'
+    accent: 'pink'
+  font:
+    text: 'Lato'
+    code: 'Ubuntu Mono'
+  logo:
+    icon: null
+  feature:
+    tabs: true
+site_name: 'PinkDocs'
