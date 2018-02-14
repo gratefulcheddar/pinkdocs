@@ -20,7 +20,8 @@ theme:
 
 # Place Other Theme Options Below
 
-# Page layout for main navigation
+# Page layout for navigation
+# Markdown file must be listed here for Mkdocs to render/build
 pages:
   - Introduction: index.md
   - Blockchain: block-chain.md
