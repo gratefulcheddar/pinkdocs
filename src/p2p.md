@@ -754,9 +754,9 @@ all the steps above to create the hash function template. The seed is
 the first parameter; the data to be hashed is the second parameter. The
 result is a uint32\_t modulo the size of the bit field in bits.
 
-{% highlight c++ %}
+```
 MurmurHash3(nHashNum * 0xFBA4C795 + nTweak, vDataToHash) % (vData.size() * 8)
-{% endhighlight %}
+```
 
 Each data element to be added to the filter is hashed by *nHashFuncs*
 number of hash functions. Each time a hash function is run, the result
@@ -882,12 +882,7 @@ make the filter useless. For this reason, clients using automatic filter
 updates need to monitor the actual false positive rate and send a new
 filter when the rate gets too high.
 
-{% endautocrossref %}
-
 #### GetAddr
-{% include helpers/subhead-links.md %}
-
-{% autocrossref %}
 
 The `getaddr` message requests an `addr` message from the receiving
 node, preferably one with lots of IP addresses of other receiving nodes.
@@ -898,13 +893,7 @@ messages to arrive over time.
 There is no payload in a `getaddr` message.  See the [message header
 section][section message header] for an example of a message without a payload.
 
-{% endautocrossref %}
-
-
 #### Ping
-{% include helpers/subhead-links.md %}
-
-{% autocrossref %}
 
 The `ping` message helps confirm that the receiving peer is still
 connected. If a TCP/IP error is encountered when sending the `ping`
@@ -923,16 +912,11 @@ single field, the nonce.
 The annotated hexdump below shows a `ping` message. (The message
 header has been omitted.)
 
-{% highlight text %}
+```
 0094102111e2af4d ... Nonce
-{% endhighlight %}
-
-{% endautocrossref %}
+```
 
 #### Pong
-{% include helpers/subhead-links.md %}
-
-{% autocrossref %}
 
 *Added in protocol version 60001 as described by BIP31.*
 
@@ -947,12 +931,7 @@ the same nonce received in the `ping` message it is replying to.
 The format of the `pong` message is identical to the `ping` message;
 only the message header differs.
 
-{% endautocrossref %}
-
 #### Reject
-{% include helpers/subhead-links.md %}
-
-{% autocrossref %}
 
 *Added in protocol version 70002 as described by BIP61.*
 
@@ -992,7 +971,7 @@ ascending code number (primary) and alphabetic in reply to (secondary) -->
 The annotated hexdump below shows a `reject` message. (The message
 header has been omitted.)
 
-{% highlight text %}
+```
 02 ................................. Number of bytes in message: 2
 7478 ............................... Type of message rejected: tx
 12 ................................. Reject code: 0x12 (duplicate)
@@ -1001,14 +980,9 @@ header has been omitted.)
 7370656e74 ......................... Reason: bad-txns-inputs-spent
 394715fcab51093be7bfca5a31005972
 947baf86a31017939575fb2354222821 ... TXID
-{% endhighlight %}
-
-{% endautocrossref %}
+```
 
 #### SendHeaders
-{% include helpers/subhead-links.md %}
-
-{% autocrossref %}
 
 The `sendheaders` message tells the receiving peer to send new block
 announcements using a `headers` message rather than an `inv` message.
@@ -1016,12 +990,7 @@ announcements using a `headers` message rather than an `inv` message.
 There is no payload in a `sendheaders` message.  See the [message header
 section][section message header] for an example of a message without a payload.
 
-{% endautocrossref %}
-
 #### VerAck
-{% include helpers/subhead-links.md %}
-
-{% autocrossref %}
 
 *Added in protocol version 209.*
 
@@ -1031,13 +1000,7 @@ other messages. The `verack` message has no payload; for an example
 of a message with no payload, see the [message headers
 section][section message header].
 
-{% endautocrossref %}
-
-
 #### Version
-{% include helpers/subhead-links.md %}
-
-{% autocrossref %}
 
 The `version` message provides information about the transmitting node
 to the receiving node at the beginning of a connection. Until both peers
@@ -1076,7 +1039,7 @@ The following annotated hexdump shows a `version` message. (The
 message header has been omitted and the actual IP addresses have been
 replaced with [RFC5737][] reserved IP addresses.)
 
-{% highlight text %}
+```
 72110100 ........................... Protocol version: 70002
 0100000000000000 ................... Services: NODE_NETWORK
 bc8f5e5400000000 ................... Epoch time: 1415483324
@@ -1096,6 +1059,6 @@ bc8f5e5400000000 ................... Epoch time: 1415483324
 
 cf050500 ........................... Start height: 329167
 01 ................................. Relay flag: true
-{% endhighlight %}
+```
 
 {% endautocrossref %}
