@@ -69,7 +69,7 @@ row (and, if necessary, repeated further to create additional rows).
 Once a row is obtained with only two hashes, those hashes are concatenated and
 hashed to produce the merkle root..
 
-![Example Merkle Tree Construction](/img/en-merkle-tree-construction.svg)
+![Example Merkle Tree Construction](img/en-merkle-tree-construction.svg)
 
 TXIDs and intermediate hashes are always in internal byte order when they're
 concatenated, and the resulting merkle root is also in internal byte
@@ -84,12 +84,12 @@ However, the header field *nBits* provides only 32 bits of space, so the
 target number uses a less precise format called "compact" which works
 like a base-256 version of scientific notation:
 
-![Converting nBits Into A Target Threshold](/img/en-nbits-overview.svg)
+![Converting nBits Into A Target Threshold](img/en-nbits-overview.svg)
 
 As a base-256 number, nBits can be quickly parsed as bytes the same way
 you might parse a decimal number in base-10 scientific notation:
 
-![Quickly Converting nBits](/img/en-nbits-quick-parse.svg)
+![Quickly Converting nBits](img/en-nbits-quick-parse.svg)
 
 Although the target threshold should be an unsigned integer, the
 original nBits implementation inherits properties from a signed data

@@ -56,7 +56,7 @@ The opcodes used in the pubkey scripts of standard transactions are:
 A complete list of opcodes can be found in the `opcodetype` enum
 of the Bitcoin Core script header file
 
-![Warning icon](/img/icon_warning.svg)
+![Warning icon](img/icon_warning.svg)
 **Signature script modification warning:**
 Signature scripts are not signed, so anyone can modify them. This
 means signature scripts should only contain data and data-pushing opcodes
@@ -66,7 +66,7 @@ makes a transaction non-standard, and future consensus rules may forbid
 such transactions altogether. (Non-data-pushing opcodes are already
 forbidden in signature scripts when spending a P2SH pubkey script.)
 
-![Warning icon](/img/icon_warning.svg)
+![Warning icon](img/icon_warning.svg)
 **`OP_CHECKMULTISIG` warning:** The multisig verification process
 described above requires that signatures in the signature script be
 provided in the same order as their corresponding public keys in
