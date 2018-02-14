@@ -1,3 +1,7 @@
+site_name: 'PinkDocs'
+docs_dir: 'src'
+site_dir: 'docs'
+
 theme:
   name: null
   custom_dir: 'mkdocs-material/material'
@@ -12,7 +16,8 @@ theme:
     icon: null
   feature:
     tabs: true
-site_name: 'PinkDocs'
+
+
 pages:
   - Intro: index.md
   - Block Chain: block-chain.md
