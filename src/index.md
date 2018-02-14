@@ -1,10 +1,12 @@
-### Find technical details and API documentation
+# Pinkcoin Developer Documentation
+
+## Find Technical Details and API Documentation
 
 Welcome to the Pinkcoin developer reference. Due to the similarities between Bitcoin and Pinkcoin, many parts of this reference were borrowed, word for word, from the [Bitcoin Developer Reference](https://bitcoin.org/en/developer-reference). This reference aims to provide technical details and API information to help you start building Pinkcoin-based applications, but it is not a specification.
 
 Questions about Pinkcoin development are best asked in the [Pinkcoin Discord](https://discordapp.com/invite/NnnyyBf). Errors or suggestions related to this documentation can be [submitted as an issue](https://github.com/gratefulcheddar/pinkdocs/issues).
 
-### Not A Specification
+## Not a Specification
 
 This documentation describes how Pinkcoin works to help educate new Pinkcoin developers, but it is not a specification - and it never will be.
 
