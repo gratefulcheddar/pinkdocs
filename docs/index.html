@@ -73,7 +73,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#find-technical-details-and-api-documentation" tabindex="1" class="md-skip">
+      <a href="#pinkcoin-developer-documentation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -99,7 +99,7 @@
                 PinkDocs
               </span>
               <span class="md-header-nav__topic">
-                Intro
+                Introduction
               </span>
             
           
@@ -154,8 +154,8 @@
         
   <li class="md-tabs__item">
     
-      <a href="." title="Intro" class="md-tabs__link md-tabs__link--active">
-        Intro
+      <a href="." title="Introduction" class="md-tabs__link md-tabs__link--active">
+        Introduction
       </a>
     
   </li>
@@ -203,33 +203,37 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Intro
+        Introduction
       </label>
     
-    <a href="." title="Intro" class="md-nav__link md-nav__link--active">
-      Intro
+    <a href="." title="Introduction" class="md-nav__link md-nav__link--active">
+      Introduction
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#find-technical-details-and-api-documentation" title="Find technical details and API documentation" class="md-nav__link">
-    Find technical details and API documentation
+  <a href="#find-technical-details-and-api-documentation" title="Find Technical Details and API Documentation" class="md-nav__link">
+    Find Technical Details and API Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#not-a-specification" title="Not A Specification" class="md-nav__link">
-    Not A Specification
+  <a href="#not-a-specification" title="Not a Specification" class="md-nav__link">
+    Not a Specification
   </a>
   
 </li>
@@ -251,8 +255,8 @@
 
 
   <li class="md-nav__item">
-    <a href="block-chain/" title="Block Chain" class="md-nav__link">
-      Block Chain
+    <a href="block-chain/" title="Blockchain" class="md-nav__link">
+      Blockchain
     </a>
   </li>
 
@@ -307,20 +311,22 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#find-technical-details-and-api-documentation" title="Find technical details and API documentation" class="md-nav__link">
-    Find technical details and API documentation
+  <a href="#find-technical-details-and-api-documentation" title="Find Technical Details and API Documentation" class="md-nav__link">
+    Find Technical Details and API Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#not-a-specification" title="Not A Specification" class="md-nav__link">
-    Not A Specification
+  <a href="#not-a-specification" title="Not a Specification" class="md-nav__link">
+    Not a Specification
   </a>
   
 </li>
@@ -342,16 +348,34 @@
               
                 
                 
-                  <h1>Intro</h1>
-                
-                <h3 id="find-technical-details-and-api-documentation">Find technical details and API documentation</h3>
-<p>Welcome to the Pinkcoin developer reference. Due to the similarities between Bitcoin and Pinkcoin, many parts of this reference were borrowed, word for word, from the <a href="https://bitcoin.org/en/developer-reference">Bitcoin Developer Reference</a>. This reference aims to provide technical details and API information to help you start building Pinkcoin-based applications, but it is not a specification.</p>
-<p>Questions about Pinkcoin development are best asked in the <a href="https://discordapp.com/invite/NnnyyBf">Pinkcoin Discord</a>. Errors or suggestions related to this documentation can be <a href="https://github.com/gratefulcheddar/pinkdocs/issues">submitted as an issue</a>.</p>
-<h3 id="not-a-specification">Not A Specification</h3>
-<p>This documentation describes how Pinkcoin works to help educate new Pinkcoin developers, but it is not a specification - and it never will be.</p>
-<p>Pinkcoin security depends on consensus. Should your program diverge from consensus, its security is weakened or destroyed. The cause of the divergence doesn't matter: it could be a bug in your program, it could be an error in this documentation which you implemented as described, or it could be you do everything right but other software on the network behaves unexpectedly. The specific cause will not matter to the users of your software whose wealth is lost.</p>
-<p>The only correct specification of consensus behavior is the actual behavior of the programs on the network which maintain consensus. As that behavior is subject to arbitrary inputs in a large variety of unique environments, it cannot ever be fully documented here or anywhere else.</p>
-<p>Furthermore, the documentation has not been extensively reviews by Pinkcoin experts and so likely contains numerous errors. Please use the Issue link on the bottom left menu to help us improve.</p>
+                <h1 id="pinkcoin-developer-documentation">Pinkcoin Developer Documentation</h1>
+<h2 id="find-technical-details-and-api-documentation">Find Technical Details and API Documentation</h2>
+<p>Welcome to the Pinkcoin developer reference. Due to the similarities 
+between Bitcoin and Pinkcoin, many parts of this reference were borrowed, 
+word for word, from the <a href="https://bitcoin.org/en/developer-reference">Bitcoin Developer Reference</a>. 
+This reference aims to provide technical details and API information to 
+help you start building Pinkcoin-based applications, but it is not a 
+specification.</p>
+<p>Questions about Pinkcoin development are best asked in the 
+<a href="https://discordapp.com/invite/NnnyyBf">Pinkcoin Discord</a>. Errors or 
+suggestions related to this documentation can be <a href="https://github.com/gratefulcheddar/pinkdocs/issues">submitted as an issue</a>.</p>
+<h2 id="not-a-specification">Not a Specification</h2>
+<p>This documentation describes how Pinkcoin works to help educate new 
+Pinkcoin developers, but it is not a specification - and it never will be.</p>
+<p>Pinkcoin security depends on consensus. Should your program diverge from 
+consensus, its security is weakened or destroyed. The cause of the 
+divergence doesn't matter: it could be a bug in your program, it could be 
+an error in this documentation which you implemented as described, or it 
+could be you do everything right but other software on the network behaves 
+unexpectedly. The specific cause will not matter to the users of your 
+software whose wealth is lost.</p>
+<p>The only correct specification of consensus behavior is the actual 
+behavior of the programs on the network which maintain consensus. As that 
+behavior is subject to arbitrary inputs in a large variety of unique 
+environments, it cannot ever be fully documented here or anywhere else.</p>
+<p>Furthermore, the documentation has not been extensively reviews by 
+Pinkcoin experts and so likely contains numerous errors. Please use the 
+Issue link on the bottom left menu to help us improve.</p>
                 
                   
                 
@@ -371,13 +395,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="block-chain/" title="Block Chain" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="block-chain/" title="Blockchain" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Block Chain
+                Blockchain
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
