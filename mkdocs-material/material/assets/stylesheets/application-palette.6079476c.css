@@ -25,7 +25,11 @@ button[data-md-color-primary=pink]{
   color:#eb78ab
 }
 [data-md-color-primary=pink] .md-nav__item--nested>.md-nav__link{
-  color:inherit
+  color:#eb78ab
+}
+[data-md-color-primary=pink] .md-nav__link,
+[data-md-color-primary=pink] .md-nav__title {
+  color: #eb78ab
 }
  
 button[data-md-color-accent=pink]{
