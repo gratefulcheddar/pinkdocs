@@ -19,8 +19,8 @@ theme:
 
 
 pages:
-  - Intro: index.md
-  - Block Chain: block-chain.md
+  - Introduction: index.md
+  - Blockchain: block-chain.md
   - Transactions: transactions.md
   - P2P Network: p2p.md
   - Pinkcoin API: api.md
