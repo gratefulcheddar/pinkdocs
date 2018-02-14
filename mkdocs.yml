@@ -13,3 +13,9 @@ theme:
   feature:
     tabs: true
 site_name: 'PinkDocs'
+pages:
+  - Intro: index.md
+  - Block Chain: block-chain.md
+  - Transactions: transactions.md
+  - P2P Network: p2p.md
+  - Pinkcoin API: api.md
