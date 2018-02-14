@@ -1,7 +1,8 @@
-site_name: 'PinkDocs'
-docs_dir: 'src'
-site_dir: 'docs'
+site_name: 'PinkDocs' # Website name
+docs_dir: 'src' # Markdown source file directory
+site_dir: 'docs' # Destination for mkdocs build command
 
+# Theme Options Required by Material theme
 theme:
   name: null
   custom_dir: 'mkdocs-material/material'
@@ -17,7 +18,9 @@ theme:
   feature:
     tabs: true
 
+# Place Other Theme Options Below
 
+# Page layout for main navigation
 pages:
   - Introduction: index.md
   - Blockchain: block-chain.md
