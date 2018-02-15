@@ -84,7 +84,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="PinkDocs" class="md-header-nav__button md-logo">
           
-            <img src="../{u'icon': None}" width="24" height="24">
+            <img src="../img/PinkLogo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -184,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <img src="../{u'icon': None}" width="24" height="24">
+        <img src="../img/PinkLogo.svg" width="24" height="24">
       
     </span>
     PinkDocs
@@ -1788,9 +1788,9 @@ exceed 520 bytes.</p>
 all the steps above to create the hash function template. The seed is
 the first parameter; the data to be hashed is the second parameter. The
 result is a uint32_t modulo the size of the bit field in bits.</p>
-<p>{% highlight c++ %}
-MurmurHash3(nHashNum * 0xFBA4C795 + nTweak, vDataToHash) % (vData.size() * 8)
-{% endhighlight %}</p>
+<pre><code>MurmurHash3(nHashNum * 0xFBA4C795 + nTweak, vDataToHash) % (vData.size() * 8)
+</code></pre>
+
 <p>Each data element to be added to the filter is hashed by <em>nHashFuncs</em>
 number of hash functions. Each time a hash function is run, the result
 will be the index number (<em>nIndex</em>) of a bit in the bit field. That bit
@@ -1889,7 +1889,7 @@ When the filtering node sees a pubkey script that pays a pubkey,
 address, or other data element matching the filter, the filtering node
 immediately updates the filter with the outpoint corresponding to that
 pubkey script.</p>
-<p><img alt="Automatically Updating Bloom Filters" src="../img/dev/en-bloom-update.svg" /></p>
+<p><img alt="Automatically Updating Bloom Filters" src="../img/en-bloom-update.svg" /></p>
 <p>If an input later spends that outpoint, the filter will match it,
 allowing the filtering node to tell the client that one of its
 transaction outputs has been spent.</p>
@@ -1927,10 +1927,7 @@ to the filter, creating a feedback loop that can (after a certain point)
 make the filter useless. For this reason, clients using automatic filter
 updates need to monitor the actual false positive rate and send a new
 filter when the rate gets too high.</p>
-<p>{% endautocrossref %}</p>
 <h4 id="getaddr">GetAddr</h4>
-<p>{% include helpers/subhead-links.md %}</p>
-<p>{% autocrossref %}</p>
 <p>The <code>getaddr</code> message requests an <code>addr</code> message from the receiving
 node, preferably one with lots of IP addresses of other receiving nodes.
 The transmitting node can use those IP addresses to quickly update its
@@ -1938,10 +1935,7 @@ database of available nodes rather than waiting for unsolicited <code>addr</code
 messages to arrive over time.</p>
 <p>There is no payload in a <code>getaddr</code> message.  See the [message header
 section][section message header] for an example of a message without a payload.</p>
-<p>{% endautocrossref %}</p>
 <h4 id="ping">Ping</h4>
-<p>{% include helpers/subhead-links.md %}</p>
-<p>{% autocrossref %}</p>
 <p>The <code>ping</code> message helps confirm that the receiving peer is still
 connected. If a TCP/IP error is encountered when sending the <code>ping</code>
 message (such as a connection timeout), the transmitting node can assume
@@ -1970,13 +1964,10 @@ single field, the nonce.</p>
 </table>
 <p>The annotated hexdump below shows a <code>ping</code> message. (The message
 header has been omitted.)</p>
-<p>{% highlight text %}
-0094102111e2af4d ... Nonce
-{% endhighlight %}</p>
-<p>{% endautocrossref %}</p>
+<pre><code>0094102111e2af4d ... Nonce
+</code></pre>
+
 <h4 id="pong">Pong</h4>
-<p>{% include helpers/subhead-links.md %}</p>
-<p>{% autocrossref %}</p>
 <p><em>Added in protocol version 60001 as described by BIP31.</em></p>
 <p>The <code>pong</code> message replies to a <code>ping</code> message, proving to the pinging
 node that the ponging node is still alive. Bitcoin Core will, by
@@ -1986,10 +1977,7 @@ default, disconnect from any clients which have not responded to a
 the same nonce received in the <code>ping</code> message it is replying to.</p>
 <p>The format of the <code>pong</code> message is identical to the <code>ping</code> message;
 only the message header differs.</p>
-<p>{% endautocrossref %}</p>
 <h4 id="reject">Reject</h4>
-<p>{% include helpers/subhead-links.md %}</p>
-<p>{% autocrossref %}</p>
 <p><em>Added in protocol version 70002 as described by BIP61.</em></p>
 <p>The <code>reject</code> message informs the receiving node that one of its previous
 messages has been rejected.</p>
@@ -2139,8 +2127,7 @@ ascending code number (primary) and alphabetic in reply to (secondary) -->
 </table>
 <p>The annotated hexdump below shows a <code>reject</code> message. (The message
 header has been omitted.)</p>
-<p>{% highlight text %}
-02 ................................. Number of bytes in message: 2
+<pre><code>02 ................................. Number of bytes in message: 2
 7478 ............................... Type of message rejected: tx
 12 ................................. Reject code: 0x12 (duplicate)
 15 ................................. Number of bytes in reason: 21
@@ -2148,29 +2135,21 @@ header has been omitted.)</p>
 7370656e74 ......................... Reason: bad-txns-inputs-spent
 394715fcab51093be7bfca5a31005972
 947baf86a31017939575fb2354222821 ... TXID
-{% endhighlight %}</p>
-<p>{% endautocrossref %}</p>
+</code></pre>
+
 <h4 id="sendheaders">SendHeaders</h4>
-<p>{% include helpers/subhead-links.md %}</p>
-<p>{% autocrossref %}</p>
 <p>The <code>sendheaders</code> message tells the receiving peer to send new block
 announcements using a <code>headers</code> message rather than an <code>inv</code> message.</p>
 <p>There is no payload in a <code>sendheaders</code> message.  See the [message header
 section][section message header] for an example of a message without a payload.</p>
-<p>{% endautocrossref %}</p>
 <h4 id="verack">VerAck</h4>
-<p>{% include helpers/subhead-links.md %}</p>
-<p>{% autocrossref %}</p>
 <p><em>Added in protocol version 209.</em></p>
 <p>The <code>verack</code> message acknowledges a previously-received <code>version</code>
 message, informing the connecting node that it can begin to send
 other messages. The <code>verack</code> message has no payload; for an example
 of a message with no payload, see the [message headers
 section][section message header].</p>
-<p>{% endautocrossref %}</p>
 <h4 id="version">Version</h4>
-<p>{% include helpers/subhead-links.md %}</p>
-<p>{% autocrossref %}</p>
 <p>The <code>version</code> message provides information about the transmitting node
 to the receiving node at the beginning of a connection. Until both peers
 have exchanged <code>version</code> messages, no other messages will be accepted.</p>
@@ -2314,22 +2293,27 @@ before initializing its half of the connection by first sending a
 <p>The following annotated hexdump shows a <code>version</code> message. (The
 message header has been omitted and the actual IP addresses have been
 replaced with [RFC5737][] reserved IP addresses.)</p>
-<p>{% highlight text %}
-72110100 ........................... Protocol version: 70002
+<pre><code>72110100 ........................... Protocol version: 70002
 0100000000000000 ................... Services: NODE_NETWORK
-bc8f5e5400000000 ................... Epoch time: 1415483324</p>
-<p>0100000000000000 ................... Receiving node's services
+bc8f5e5400000000 ................... Epoch time: 1415483324
+
+0100000000000000 ................... Receiving node's services
 00000000000000000000ffffc61b6409 ... Receiving node's IPv6 address
-208d ............................... Receiving node's port number</p>
-<p>0100000000000000 ................... Transmitting node's services
+208d ............................... Receiving node's port number
+
+0100000000000000 ................... Transmitting node's services
 00000000000000000000ffffcb0071c0 ... Transmitting node's IPv6 address
-208d ............................... Transmitting node's port number</p>
-<p>128035cbc97953f8 ................... Nonce</p>
-<p>0f ................................. Bytes in user agent string: 15
-2f5361746f7368693a302e392e332f ..... User agent: /Satoshi:0.9.3/</p>
-<p>cf050500 ........................... Start height: 329167
+208d ............................... Transmitting node's port number
+
+128035cbc97953f8 ................... Nonce
+
+0f ................................. Bytes in user agent string: 15
+2f5361746f7368693a302e392e332f ..... User agent: /Satoshi:0.9.3/
+
+cf050500 ........................... Start height: 329167
 01 ................................. Relay flag: true
-{% endhighlight %}</p>
+</code></pre>
+
 <p>{% endautocrossref %}</p>
                 
                   
