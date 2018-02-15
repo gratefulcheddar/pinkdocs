@@ -57,3 +57,7 @@ merged.
 ###### To create a new page:
 - Create a markdown file in the `src/` directory.
 - Add the file to the pages section of `mkdocs.yml`
+
+### Questions
+
+Please direct any and all questions to the issue tracker! Thank you!
