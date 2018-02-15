@@ -32,15 +32,13 @@ to the source code.
 ### Contributing
 
 ###### Issue Tracker
-To report an issue, use Github's issue [here]
-(https://github.com/gratefulcheddar/pinkdocs/issues). Look here to see if 
-anyone else may be working on something before making any changes to the 
-code.
+To report an issue, use Github's issue tracker https://github.com/gratefulcheddar/pinkdocs/issues. 
+Look here to see if anyone else may be working on something before making 
+any changes to the code.
 
 ###### Making Changes
-To add or edit the source code, [fork](https://github.com/gratefulcheddar/pinkdocs#fork-destination-box) 
-your own copy of this repository and submit a new pull request with your 
-changes. 
+To add or edit the source code, fork your own copy of this repository 
+and submit a new pull request with your changes. 
 
 ###### Organization/Communication
 Please keep changes small - edit one section (delineated by a 
