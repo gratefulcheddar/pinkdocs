@@ -860,7 +860,7 @@ address, or other data element matching the filter, the filtering node
 immediately updates the filter with the outpoint corresponding to that
 pubkey script.
 
-![Automatically Updating Bloom Filters](img/dev/en-bloom-update.svg)
+![Automatically Updating Bloom Filters](img/en-bloom-update.svg)
 
 If an input later spends that outpoint, the filter will match it,
 allowing the filtering node to tell the client that one of its
