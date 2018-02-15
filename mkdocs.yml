@@ -13,8 +13,7 @@ theme:
   font:
     text: 'Lato'
     code: 'Ubuntu Mono'
-  logo:
-    icon: null
+  logo: 'img/PinkLogo.svg'
   feature:
     tabs: true
 
