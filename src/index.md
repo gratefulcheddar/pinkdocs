@@ -1,5 +1,14 @@
 # Pinkcoin Developer Documentation
 
+## WARNING: Incomplete and Inaccurate
+
+This is currently a work in progress. All pages require review. These docs 
+were bootstrapped with the [Bitcoin Developer Reference](https://bitcoin.org/en/developer-reference). 
+While Pinkcoin is a long distant clone of Bitcoin, its codebase is old and 
+a lot of changes have gone into Bitcoin since. If you would like to 
+contribute in the aid of completing this documentation, please review the 
+[Github](https://github.com/gratefulcheddar/pinkdocs).
+
 ## Find Technical Details and API Documentation
 
 Welcome to the Pinkcoin developer reference. Due to the similarities 
