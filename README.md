@@ -38,7 +38,7 @@ any changes to the code.
 
 ###### Making Changes
 To add or edit the source code, fork your own copy of this repository 
-and submit a new pull request with your changes. 
+and submit a new pull request to the master branch with your changes. 
 
 ###### Organization/Communication
 Please keep changes small - edit one section (delineated by a 
