@@ -19,7 +19,7 @@ in little-endian order.
 An example header in hex:
 
 ```
-02000000 ........................... Block version: 2
+01000000 ........................... Block version: 1
 
 b6ff0b1b1680a2862a30ca44d346d9e8
 910d334beb48ca0c0000000000000000 ... Hash of previous block's header
