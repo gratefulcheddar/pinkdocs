@@ -4,8 +4,7 @@ The opcodes used in the pubkey scripts of standard transactions are:
 
 * Various data pushing opcodes from 0x00 to 0x4e (1--78). These aren't
   typically shown in examples, but they must be used to push
-  signatures and public keys onto the stack. See the link below this list
-  for a description.
+  signatures and public keys onto the stack.
 
 * `OP_TRUE`/`OP_1` (0x51) and `OP_2` through `OP_16` (0x52--0x60), which
   push the values 1 through 16 to the stack.
@@ -54,7 +53,7 @@ The opcodes used in the pubkey scripts of standard transactions are:
 * `OP_RETURN` terminates the script in failure when executed.
 
 A complete list of opcodes can be found in the `opcodetype` enum
-of the Bitcoin Core script header file
+of the Pinkcoin script header file (script.h).
 
 ![Warning icon](img/icon_warning.svg)
 **Signature script modification warning:**
