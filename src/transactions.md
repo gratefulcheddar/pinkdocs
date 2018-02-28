@@ -121,13 +121,13 @@ format used in raw transactions (described in a [following
 sub-section][raw transaction format]).  Taking the resulting hash:
 
 1. Add an address version byte in front of the hash.  The version
-bytes commonly used by Bitcoin are:
+bytes commonly used by Pinkcoin are:
 
-    * 0x00 for P2PKH addresses on the main Bitcoin network (mainnet)
+    * 0x03 for P2PKH addresses on the main Pinkcoin network (mainnet)
 
-    * 0x6f for P2PKH addresses on the Bitcoin testing network (testnet)
+    * 0x37 for P2PKH addresses on the Pinkcoin testing network (testnet)
 
-    * 0x05 for P2SH addresses on mainnet
+    * 0x1c for P2SH addresses on mainnet
 
     * 0xc4 for P2SH addresses on testnet
 
@@ -139,34 +139,8 @@ bytes commonly used by Bitcoin are:
 
 4. Append the checksum to the version and hash, and encode it as a base58
    string: <!--[-->`BASE58(version . hash . checksum)`<!--]-->
- 
-Bitcoin's base58 encoding, called Base58Check may not match other implementations. Tier
-Nolan provided the following example encoding algorithm to the Bitcoin
-Wiki Base58Check
-encoding page under
-the Creative Commons Attribution 3.0 license:
 
-```
-code_string = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
-x = convert_bytes_to_big_integer(hash_result)
-
-output_string = ""
-
-while(x > 0) 
-   {
-       (x, remainder) = divide(x, 58)
-       output_string.append(code_string[remainder])
-   }
-
-repeat(number_of_leading_zero_bytes_in_hash)
-   {
-   output_string.append(code_string[0]);
-   }
-
-output_string.reverse();
-```
-
-Bitcoin's own code can be traced using the base58 header
+Pinkcoin's own code can be traced using the base58 header
 file.
 To convert addresses back into hashes, reverse the base58 encoding, extract
 the checksum, repeat the steps to create the checksum and compare it
