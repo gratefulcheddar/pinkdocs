@@ -84,7 +84,7 @@ Type identifier zero and type identifiers greater than two are reserved
 for future implementations. Pinkcoin ignores all inventories with
 one of these unknown types.
 
-## Block
+### Block
 
 The `block` message transmits a single serialized block in the format
 described in the [serialized blocks section](/block-chain/#serialized-blocks).
@@ -102,7 +102,7 @@ different reasons:
    send the block from multiple nodes, possibly sending the same block
    to some peers more than once.
 
-#### GetBlocks
+### GetBlocks
 
 The `getblocks` message requests an `inv` message that provides block
 header hashes starting from a particular point in the block chain. It
@@ -149,7 +149,7 @@ d39f608a7775b537729884d4e6633bb2
 00000000000000000000000000000000 ... Stop hash
 ```
 
-## GetData
+### GetData
 
 The `getdata` message requests one or more data objects from another
 node. The objects are requested by an inventory, which the requesting
@@ -168,7 +168,7 @@ previously advertised it had that data by sending an `inv` message.
 The format and maximum size limitations of the `getdata` message are
 identical to the `inv` message; only the message header differs.
 
-## GetHeaders
+### GetHeaders
 
 The `getheaders` message requests a `headers` message that provides block headers
 starting from a particular point in the block chain. It allows a
@@ -180,9 +180,8 @@ with one minor difference: the `inv` reply to the `getblocks` message
 will include no more than 500 block header hashes; the `headers` reply
 to the `getheaders` message will include as many as 2,000 block headers.
 
-{% endautocrossref %}
 
-## Headers
+### Headers
 
 The `headers` message sends block headers to a node which
 previously requested certain headers with a `getheaders` message. A headers
@@ -211,7 +210,7 @@ fe9f0864 ........................... Nonce
 00 ................................. Transaction count (0x00)
 ```
 
-## Inv
+### Inv
 
 The `inv` message (inventory message) transmits one or more inventories of
 objects known to the transmitting peer.  It can be sent unsolicited to
@@ -242,7 +241,7 @@ de55ffd709ac1f5dc509a0925d0b1fc4
 a055aaf1d872e94ae85e9817b2c68dc7 ... Hash (TXID)
 ```
 
-#### MemPool
+### MemPool
 
 The `mempool` message requests the TXIDs of transactions that the
 receiving node has verified as valid but which have not yet appeared in
@@ -284,7 +283,7 @@ be complete:
 There is no payload in a `mempool` message.  See the [message header
 section][section message header] for an example of a message without a payload.
 
-## MerkleBlock
+### MerkleBlock
 
 The `merkleblock` message is a reply to a `getdata` message which
 requested a block using the inventory type `MSG_MERKLEBLOCK`.  It is
@@ -344,7 +343,7 @@ traffic dump this output was taken from, the full transaction belonging
 to that TXID was sent immediately after the `merkleblock` message as
 a `tx` message.
 
-### Parsing A MerkleBlock Message
+#### Parsing A MerkleBlock Message
 
 As seen in the annotated hexdump above, the `merkleblock` message
 provides three special data types: a transaction count, a list of
@@ -415,7 +414,7 @@ For a detailed example of parsing a `merkleblock` message, please see
 the corresponding [merkle block examples section][section merkleblock
 example].
 
-### Creating A MerkleBlock Message
+#### Creating A MerkleBlock Message
 
 It's easier to understand how to create a `merkleblock` message after
 you understand how to parse an already-created message, so we recommend
@@ -459,7 +458,7 @@ instructions in the table above, processing is complete.  Pad your flag
 list to a byte boundary and construct the `merkleblock` message using the
 template near the beginning of this subsection.
 
-## NotFound
+### NotFound
 
 The `notfound` message is a reply to a `getdata` message which
 requested an object the receiving node does not have available for
@@ -471,7 +470,7 @@ send those blocks.)
 The format and maximum size limitations of the `notfound` message are
 identical to the `inv` message; only the message header differs.
 
-#### Tx
+### Tx
 
 The `tx` message transmits a single transaction in the raw transaction
 format. It can be sent in a variety of situations;
@@ -506,7 +505,7 @@ information. In addition, this section does not yet cover P2P protocol
 operation over the Tor network; if you would like to contribute
 information about Tor, please open an issue.
 
-## Addr
+### Addr
 
 The `addr` (IP address) message relays connection information
 for peers on the network. Each peer which wants to accept incoming
@@ -547,7 +546,7 @@ d91f4854 ........................... Epoch time: 1414012889
 [...] .............................. (999 more addresses omitted)
 ```
 
-## FeeFilter
+### FeeFilter
 
 The `feefilter` message is a request to the receiving peer to not relay any
 transaction inv messages to the sending peer where the fee rate for the
@@ -589,7 +588,7 @@ header has been omitted.)
 ```
 
 
-## FilterAdd
+### FilterAdd
 
 The `filteradd` message tells the receiving peer to add a single element to
 a previously-set bloom filter, such as a new public key. The element is
@@ -622,7 +621,7 @@ fdacf9b3eb077412e7a968d2e4f11b9a
 9dee312d666187ed77ee7d26af16cb0b ... Element (A TXID)
 ```
 
-## FilterClear
+### FilterClear
 
 
 The `filterclear` message tells the receiving peer to remove a
@@ -638,7 +637,7 @@ There is no payload in a `filterclear` message.  See the [message header
 section][section message header] for an example of a message without a payload.
 
 
-## FilterLoad
+### FilterLoad
 
 The `filterload` message tells the receiving peer to filter all relayed
 transactions and requested merkle blocks through the provided filter.
@@ -869,7 +868,7 @@ make the filter useless. For this reason, clients using automatic filter
 updates need to monitor the actual false positive rate and send a new
 filter when the rate gets too high.
 
-#### GetAddr
+### GetAddr
 
 The `getaddr` message requests an `addr` message from the receiving
 node, preferably one with lots of IP addresses of other receiving nodes.
@@ -880,7 +879,7 @@ messages to arrive over time.
 There is no payload in a `getaddr` message.  See the [message header
 section][section message header] for an example of a message without a payload.
 
-#### Ping
+### Ping
 
 The `ping` message helps confirm that the receiving peer is still
 connected. If a TCP/IP error is encountered when sending the `ping`
@@ -903,7 +902,7 @@ header has been omitted.)
 0094102111e2af4d ... Nonce
 ```
 
-#### Pong
+### Pong
 
 *Added in protocol version 60001 as described by BIP31.*
 
@@ -918,7 +917,7 @@ the same nonce received in the `ping` message it is replying to.
 The format of the `pong` message is identical to the `ping` message;
 only the message header differs.
 
-#### Reject
+### Reject
 
 *Added in protocol version 70002 as described by BIP61.*
 
@@ -969,7 +968,7 @@ header has been omitted.)
 947baf86a31017939575fb2354222821 ... TXID
 ```
 
-#### SendHeaders
+### SendHeaders
 
 The `sendheaders` message tells the receiving peer to send new block
 announcements using a `headers` message rather than an `inv` message.
@@ -977,7 +976,7 @@ announcements using a `headers` message rather than an `inv` message.
 There is no payload in a `sendheaders` message.  See the [message header
 section][section message header] for an example of a message without a payload.
 
-#### VerAck
+### VerAck
 
 *Added in protocol version 209.*
 
@@ -987,7 +986,7 @@ other messages. The `verack` message has no payload; for an example
 of a message with no payload, see the [message headers
 section][section message header].
 
-#### Version
+### Version
 
 The `version` message provides information about the transmitting node
 to the receiving node at the beginning of a connection. Until both peers
@@ -1047,5 +1046,3 @@ bc8f5e5400000000 ................... Epoch time: 1415483324
 cf050500 ........................... Start height: 329167
 01 ................................. Relay flag: true
 ```
-
-{% endautocrossref %}
