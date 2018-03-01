@@ -1,4 +1,4 @@
-This section describes the Bitcoin P2P network protocol (but it is not a
+This section describes the Pinkcoin P2P network protocol (but it is not a
 specification).
 
 All peer-to-peer communication occurs entirely over TCP.
@@ -8,29 +8,17 @@ integers mentioned in this section are transmitted in little-endian order.
 
 ## Constants And Defaults
 
-The following constants and defaults are taken from Bitcoin Core's
-chainparams.cpp source code file.
-
 | Network | Default Port | Start String | Max nBits
-|---------|--------------|-----------------------------------------------|---------------
-| Mainnet | 8333         | 0xf9beb4d9                                    | 0x1d00ffff
-| Testnet | 18333        | 0x0b110907                                    | 0x1d00ffff
-| Regtest | 18444        | 0xfabfb5da                                    | 0x207fffff
-
-Note: the testnet start string and nBits above are for testnet3; the
-original testnet used a different string and higher (less difficult)
-nBits.
+|---------|--------------|--------------------------------------|-----
+| Mainnet | 9134         | -                                    | -
+| Testnet | 19134        | -                                    | -
 
 Command line parameters can change what port a node listens on (see
 `-help`). Start strings are hardcoded constants that appear at the start
-of all messages sent on the Bitcoin network; they may also appear in
-data files such as Bitcoin Core's block database.  The nBits displayed
+of all messages sent on the Pinkcoin network; they may also appear in
+data files such as Pinkcoin's block database.  The nBits displayed
 above are in big-endian order; they're sent over the network in
 little-endian order.
-
-Bitcoin Core's chainparams.cpp also includes
-other constants useful to programs, such as the hash of the genesis
-blocks for the different networks.
 
 ## Protocol Versions
 
@@ -39,11 +27,11 @@ with the most recent versions listed first. (If you know of a protocol
 version that implemented a major change but which is not listed here,
 please open an issue.)
 
-As of Bitcoin Core 2.1.0.4, the most recent protocol version is 60014.
+As of Pinkcoin v2.1.0.4 , the most recent protocol version is 60014.
 
 | Version | Initial Release                    | Major Changes
 |---------|------------------------------------|--------------
-| 60014   | Pinkcoin Core v2.1.0.3 | Hardforking Network Attack Bug-fix ([Details](https://medium.com/@cryptocayce/incident-pinkcoin-network-attack-9f6bbe5048b6))
+| 60014   | Pinkcoin v2.1.0.3 | Hardforking Network Attack Bug-fix ([Details](https://medium.com/@cryptocayce/incident-pinkcoin-network-attack-9f6bbe5048b6))
 
 ## Message Headers
 
