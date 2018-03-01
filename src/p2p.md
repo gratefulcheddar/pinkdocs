@@ -10,8 +10,8 @@ integers mentioned in this section are transmitted in little-endian order.
 
 | Network | Default Port | Start String | Max nBits
 |---------|--------------|--------------------------------------|-----
-| Mainnet | 9134         | -                                    | -
-| Testnet | 19134        | -                                    | -
+| Mainnet | 9134         | f2f4f9fb                                    | -
+| Testnet | 19134        | 0204050d                                   | -
 
 Command line parameters can change what port a node listens on (see
 `-help`). Start strings are hardcoded constants that appear at the start
