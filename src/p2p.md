@@ -79,10 +79,9 @@ The currently-available type identifiers are:
 |-----------------|-------------------------------------------------------------------------------|---------------
 | 1               | `MSG_TX`                                     | The hash is a TXID.
 | 2               | `MSG_BLOCK`                            | The hash is of a block header.
-| 3               | `MSG_FILTERED_BLOCK` | The hash is of a block header; identical to `MSG_BLOCK`. When used in a `getdata` message, this indicates the response should be a `merkleblock` message rather than a `block` message (but this only works if a bloom filter was previously configured).  **Only for use in `getdata` messages.**
 
-Type identifier zero and type identifiers greater than three are reserved
-for future implementations. Bitcoin Core ignores all inventories with
+Type identifier zero and type identifiers greater than two are reserved
+for future implementations. Pinkcoin ignores all inventories with
 one of these unknown types.
 
 ## Block
