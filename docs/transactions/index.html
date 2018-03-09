@@ -446,8 +446,7 @@
 <li>
 <p>Various data pushing opcodes from 0x00 to 0x4e (1--78). These aren't
   typically shown in examples, but they must be used to push
-  signatures and public keys onto the stack. See the link below this list
-  for a description.</p>
+  signatures and public keys onto the stack.</p>
 </li>
 <li>
 <p><code>OP_TRUE</code>/<code>OP_1</code> (0x51) and <code>OP_2</code> through <code>OP_16</code> (0x52--0x60), which
@@ -503,7 +502,7 @@ below for more details.</p>
 </li>
 </ul>
 <p>A complete list of opcodes can be found in the <code>opcodetype</code> enum
-of the Bitcoin Core script header file</p>
+of the Pinkcoin script header file (script.h).</p>
 <p><img alt="Warning icon" src="../img/icon_warning.svg" />
 <strong>Signature script modification warning:</strong>
 Signature scripts are not signed, so anyone can modify them. This
@@ -564,16 +563,16 @@ sub-section][raw transaction format]).  Taking the resulting hash:</p>
 <ol>
 <li>
 <p>Add an address version byte in front of the hash.  The version
-bytes commonly used by Bitcoin are:</p>
+bytes commonly used by Pinkcoin are:</p>
 <ul>
 <li>
-<p>0x00 for P2PKH addresses on the main Bitcoin network (mainnet)</p>
+<p>0x03 for P2PKH addresses on the main Pinkcoin network (mainnet)</p>
 </li>
 <li>
-<p>0x6f for P2PKH addresses on the Bitcoin testing network (testnet)</p>
+<p>0x37 for P2PKH addresses on the Pinkcoin testing network (testnet)</p>
 </li>
 <li>
-<p>0x05 for P2SH addresses on mainnet</p>
+<p>0x1c for P2SH addresses on mainnet</p>
 </li>
 <li>
 <p>0xc4 for P2SH addresses on testnet</p>
@@ -593,31 +592,7 @@ bytes commonly used by Bitcoin are:</p>
    string: <!--[--><code>BASE58(version . hash . checksum)</code><!--]--></p>
 </li>
 </ol>
-<p>Bitcoin's base58 encoding, called Base58Check may not match other implementations. Tier
-Nolan provided the following example encoding algorithm to the Bitcoin
-Wiki Base58Check
-encoding page under
-the Creative Commons Attribution 3.0 license:</p>
-<pre><code>code_string = &quot;123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz&quot;
-x = convert_bytes_to_big_integer(hash_result)
-
-output_string = &quot;&quot;
-
-while(x &gt; 0) 
-   {
-       (x, remainder) = divide(x, 58)
-       output_string.append(code_string[remainder])
-   }
-
-repeat(number_of_leading_zero_bytes_in_hash)
-   {
-   output_string.append(code_string[0]);
-   }
-
-output_string.reverse();
-</code></pre>
-
-<p>Bitcoin's own code can be traced using the base58 header
+<p>Pinkcoin's own code can be traced using the base58 header
 file.
 To convert addresses back into hashes, reverse the base58 encoding, extract
 the checksum, repeat the steps to create the checksum and compare it
